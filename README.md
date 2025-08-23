@@ -1,6 +1,11 @@
 ```rust
 ➜  fentas git:(main) whoami
-fentas
+Jan Guth
+
+➜  fentas git:(main) pstree -p $$
+bash(13849)─┬─wife(13936)
+            ├─teo(13922)
+            └─lea(13929)
 
 ➜  fentas git:(main) uname -a
 **Software Architect** • **DevOps Engineer** • **Full-Stack Developer** • **Upcoming Farmer 🧑‍🌾**
