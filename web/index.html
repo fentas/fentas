@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<!-- inspired from https://reess.me/ -->
+<html lang="en">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jan Guth</title>
+  <meta name="description" content="whoami">
+  <meta name="keywords" content="software architect, devops engineer, full-stack developer">
+  <meta name="author" content="Jan Guth">
+  
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700" rel="stylesheet">
+  <style type="text/css">
+    /* Reset browser styles */
+    * { margin: 0; padding: 0; }
+    ul, li { list-style: none; }
+
+    /* Generic styles */
+    body {
+      font-family: "Source Code Pro", monospace;
+      font-size: 14px;
+      line-height: 20px;
+      color: #c6d5e4;
+      background-color: #2B2B2B;
+      padding: 32px 25px 16px 25px;
+    }
+
+    strong {
+      font-weight: normal;
+      color: #D88332;
+    }
+
+    a {
+      color: #A5C25C;
+      text-decoration: underline;
+    }
+
+    /* Section behaviour */
+    @media (min-width: 1000px) {
+      html, body {
+        height: calc(100% - 32px - 16px);
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+      }
+
+      .section-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 1400px;
+        margin: auto;
+        column-count: 1;
+      }
+
+      section {
+        width: 100%;
+        margin-bottom: 16px;
+      }
+
+      .section-wrapper > section {
+        padding: 0 25%;
+      }
+
+      section.wide {
+        column-count: 2;
+        padding: 0;
+        margin: 2rem auto;
+        column-gap: 4rem;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      section.wide {
+        column-count: 3;
+      }
+    }
+
+    section > section {
+      margin-top: 1rem;
+      margin-left: 2.5ex;
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+      p, ul, .project-description {
+        margin-left: 0;
+      }
+
+      ul.big-list li {
+        margin-bottom: 16px;
+      }
+    }
+
+    /* Headings */
+    h1, h2 {
+      font-size: 14px;
+      color: #FFC66D;
+      margin-bottom: 16px;
+      font-weight: normal;
+    }
+
+    h1:before {
+      content: '$ ';
+    }
+
+    h2 {
+      color: #A6CF98;
+    }
+
+    /* Text */
+    p {
+      margin-left: 2.5ex;
+      margin-top: 1ex;
+      margin-bottom: 0.5ex;
+      max-width: 560px;
+    }
+
+    /* Lists */
+    ul {
+      margin-left: 25px;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    li:before {
+      content: '➜ ';
+    }
+
+    /* svg icons */
+    svg.icon {
+      width:1rem;
+      fill: white;
+      vertical-align: sub;
+    }
+      
+
+  </style>
+</head>
+<body>
+  <div class="section-wrapper">
+    <section>
+      <h1 class="first">whoami</h1>
+
+      <p>
+        fentas
+      </p>
+    </section>
+
+    <section>
+      <h1>tldr fentas</h1>
+
+      <p>
+        <strong>fentas</strong> is represented by me, <strong>Jan Guth</strong>.
+        I am interested in many things, and I love to learn.
+      </p>
+    </section>
+
+    <section class="wide">
+      <section>
+        <h2>current [l]ocation</h2>
+
+        <p>
+          curl wttr.in/Slovenia
+        </p>
+      </section>
+
+      <section>
+        <h2>[s]poken languages</h2>
+
+        <p>
+          I fluently speak <strong>German</strong> and <strong>English</strong>.
+           Also, I am in the process of learning <strong>Slovene</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h2>computer science</h2>
+
+        <p>
+          I started programming when I was 11 years old, around <time id="p"></time> seconds ago, and worked in this field ever since.
+          In between, I was an apprentice as an IT specialist for application development at <a href="https://www.bosch.com/">Bosch GmbH</a>.
+        </p>
+        
+        <p>
+          Currently, I work primarily as a <strong>Software Architect</strong>, <strong>DevOps Engineer</strong> and <strong>Full-Stack Developer</strong>.
+        </p>
+      </section>
+
+      <section>
+        <h2>➜ software [a]rchitect</h2>
+
+        <p>
+          I designed and implemented software solutions for a wide range of problems.
+          For example, the ability to build <strong>container manifest</strong> remotely and deploy the workload, described by a <strong>docker-compose</strong> yaml file, to a Kubernetes cluster, simply via command line interface.
+	        This included a CLI tool written in <strong>GoLang</strong>, a custom self-hosted <strong>Git</strong> repository and a <strong>Kubernetes</strong> operator.
+        </p>
+      </section>
+
+      <section>
+        <h2>➜ [d]evops engineer</h2>
+
+        <p>
+          As a <strong>DevOps Engineer</strong> I designed and implemented <strong>CI/CD pipelines</strong> for <strong>Jenkins</strong>, <strong>GitLab</strong>, <strong>GitHub</strong> and complete custom solutions.
+          Additionally, I worked on the infrastructure side of things, including the setup of Kubernetes clusters and the migration of existing workloads to it.
+          These Kubernetes clusters were hosted on-premise, in the cloud (<strong>AWS EKS</strong>, <strong>Azure AKS</strong>) and on <strong>bare-metal</strong> (via <strong>terraform</strong> - kubespray, and <strong>k3s</strong>) as a mix of <strong>root server</strong> and dynamically provisioned <strong>virtual machines</strong>.
+          Following <strong>GitOps</strong> and <strong>Infrastructure as Code</strong> principles, I was able to automate the deployment of the infrastructure and the workloads.
+          Utilizing <strong>Bash</strong> and <strong>Python</strong> for this is a given, but I also worked with <strong>GoLang</strong> and <strong>TypeScript</strong> to create custom tools.
+        </p>
+      </section>
+
+      <section>
+        <h2>➜ [f]ull-stack developer</h2>
+
+        <p>
+          As a <strong>Full-Stack Developer</strong>, I worked on a wide range of projects, from small websites to large enterprise applications.
+          I worked with a lot of different technologies, including <strong>NodeJS</strong>, <strong>React</strong>, <strong>TypeScript</strong>, <strong>PHP</strong>, <strong>AngularJS</strong>, <strong>PostgreSQL</strong>, <strong>MongoDB</strong> and <strong>MySQL</strong>, to name a few.
+          Resulting in a quick adaptation to new technologies and a broad knowledge of the current state of the art.
+        </p>
+      </section>
+    </section>
+
+    <section>
+      <h1>cat ~/projects/lanisce.md</h1>
+
+      <p>
+        <strong>Lanišče</strong> - Sustainable farming and agricultural innovation project in Slovenia
+      </p>
+
+      <p>
+        Building a modern, sustainable farm focused on regenerative agriculture, permaculture principles, and innovative farming techniques. 
+        Documenting the journey from tech professional to farmer, sharing knowledge about sustainable food production and rural entrepreneurship.
+      </p>
+
+      <ul>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          <a href="https://www.youtube.com/@lanisce">https://www.youtube.com/@lanisce</a>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          <a href="https://www.instagram.com/lanisce.si/">https://www.instagram.com/lanisce.si/</a>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+            <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+          </svg>
+          <a href="https://x.com/lanisce_si">https://x.com/lanisce_si</a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h1>mail -s "Get in touch" jan.guth@gmail.com &gt;/dev/null</h1>
+
+      <p>
+        I love to work on interesting problems. If you want to get in touch, feel free to use any of these methods to contact me:
+      </p>
+
+      <ul style="">
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 90 90">
+            <path d="M75.546 78.738H14.455C6.484 78.738 0 72.254 0 64.283V25.716c0-7.97 6.485-14.455 14.455-14.455h61.091c7.97 0 14.454 6.485 14.454 14.455v38.567c0 7.971-6.484 14.455-14.454 14.455zm-61.091-63.25c-5.64 0-10.228 4.588-10.228 10.228v38.567c0 5.64 4.588 10.229 10.228 10.229h61.091c5.64 0 10.228-4.589 10.228-10.229V25.716c0-5.64-4.588-10.228-10.228-10.228H14.455z"/>
+            <path d="M11.044 25.917 43.456 57.5c2.014 1.962 5.105-1.122 3.088-3.088L14.132 22.83c-2.014-1.963-5.105 1.122-3.088 3.087z"/>
+            <path d="m46.544 57.5 32.412-31.582c2.016-1.965-1.073-5.051-3.088-3.088L43.456 54.412c-2.016 1.965 1.073 5.051 3.088 3.088z"/>
+            <path d="M78.837 64.952 57.269 44.499c-2.039-1.933-5.132 1.149-3.088 3.088L75.749 68.04c2.039 1.933 5.132-1.15 3.088-3.088zM14.446 68.039l21.568-20.453c2.043-1.938-1.048-5.022-3.088-3.088L11.358 64.951c-2.043 1.938 1.048 5.023 3.088 3.088z"/>
+          </svg>
+          <a href="mailto:jan.guth@gmail.com">mailto:jan.guth@gmail.com</a>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+          <a href="https://github.com/fentas">https://github.com/fentas</a></li>
+      </ul>
+    </section>
+
+    <section>
+	    <h1>
+👴(){ ps -A -ostat,ppid | awk '/[zZ]/{print $2}';}
+<br>&nbsp;
+🧬(){ exec sleep infinity;}
+<br>&nbsp;
+💀(){ for p in "$@";do echo -n 🪦;kill $p;sleep 0.0001;done;}
+<br>&nbsp;
+🧟(){ 🛑 || 🧟|🧟& 🧬;}
+<br>&nbsp;
+🛑(){ ((++O > 10 ));}
+<br>&nbsp;
+🧟 & disown
+<br>&nbsp;
+💀 $(👴)
+	  </h1>
+      <p>
+        I'm currently available for contracting work through the two companies I founded,
+        <a href="https://lanisce.si/">Lanišče d.o.o.</a> and <a href="https://thingylabs.de/">Thingylabs GmbH</a>.
+      </p>
+
+      <p>
+        These are some of the clients that I have worked with before:
+      </p>
+
+      <ul class="big-list">
+        <li>Bosch Engineering GmbH</li>
+        <li>Bertrandt AG</li>
+        <li>Urlaubstracker GmbH</li>
+        <li>CW2. GmbH & Co. KG</li>
+        <li>Bluhm Systeme GmbH</li>
+        <li>Gallery Sindelfingen</li>
+      </ul>
+    </section>
+  </div>
+
+  <script type="text/javascript">
+    t = () => document.getElementById('p').innerHTML = Math.round((new Date() - new Date(1999, 3, 13)) / 1000);
+    t(); setInterval(t, 1000);
+  </script>
+</body>
+</html>
