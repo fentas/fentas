@@ -3,7 +3,7 @@
 Jan Guth
 
 ➜  fentas git:(main) pstree -p $$
-bash(13849)─┬─pstree(13936)
+bash(13849)─┬─wife(13936)
             ├─tail(13922)
             └─tail(13929)
 
