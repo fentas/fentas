@@ -1,5 +1,3 @@
-# fentas
-
 ```bash
 $ whoami
 fentas
