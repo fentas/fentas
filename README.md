@@ -74,21 +74,33 @@ languages:
 Building a modern, sustainable farm focused on regenerative agriculture, permaculture principles, and innovative farming techniques. Documenting the journey from tech professional to farmer, sharing knowledge about sustainable food production and rural entrepreneurship.
 
 <p align="center">
-  
-[![YouTube](https://img.shields.io/badge/YouTube-@lanisce-red?style=for-the-badge&logo=youtube&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8)](https://www.youtube.com/@lanisce)
-[![Instagram](https://img.shields.io/badge/Instagram-@lanisce.si-E4405F?style=for-the-badge&logo=instagram&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8)](https://www.instagram.com/lanisce.si/)
-[![X (Twitter)](https://img.shields.io/badge/X-@lanisce__si-000000?style=for-the-badge&logo=x&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8)](https://x.com/lanisce_si)
+
+  <a href="https://www.youtube.com/@lanisce">
+    <img src="https://img.shields.io/badge/YouTube-@lanisce-red?style=for-the-badge&logo=youtube&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8" alt="YouTube">
+  </a>
+  <a href="https://www.instagram.com/lanisce.si/">
+    <img src="https://img.shields.io/badge/Instagram-@lanisce.si-E4405F?style=for-the-badge&logo=instagram&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8" alt="Instagram">
+  </a>
+  <a href="https://x.com/lanisce_si">
+    <img src="https://img.shields.io/badge/X-@lanisce__si-000000?style=for-the-badge&logo=x&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8" alt="X">
+  </a>
 
 </p>
+
+&nbsp;
 
 ### Contact
 
 > *"I am interested in many things, and I love to learn."*
 
 <p align="center">
-  
-[![Email](https://img.shields.io/badge/Email-jan.guth%40gmail.com-red?style=for-the-badge&logo=gmail&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8)](mailto:jan.guth@gmail.com)
-[![Website](https://img.shields.io/badge/Website-jan.guth.dev-blue?style=for-the-badge&logo=firefox&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8)](https://jan.guth.dev)
+
+  <a href="mailto:jan.guth@gmail.com">
+    <img src="https://img.shields.io/badge/Email-jan.guth%40gmail.com-red?style=for-the-badge&logo=gmail&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8" alt="Email">
+  </a>
+  <a href="https://jan.guth.dev">
+    <img src="https://img.shields.io/badge/Website-jan.guth.dev-blue?style=for-the-badge&logo=firefox&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8" alt="Website">
+  </a>
 
 </p>
 
