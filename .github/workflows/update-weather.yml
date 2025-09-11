@@ -64,9 +64,9 @@ jobs:
             NR == s {
               while ((getline line < f) > 0) print line;
               close(f);
-              skip=1; next
+              next
             }
-            skip && NR > s && NR <= e { next }
+            NR > s && NR <= e { next }
             { print }
           ' "${FILE}" > "${FILE}.tmp"
 
