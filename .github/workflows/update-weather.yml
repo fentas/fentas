@@ -35,7 +35,7 @@ jobs:
           set -euo pipefail
 
           readonly FILE="README.md"
-          readonly URL='https://wttr.in/~Bled,%20Slovenija?T'
+          readonly URL='https://wttr.in/~Bled,%20Slovenija?T&m'
           readonly MARKER='^Weather report:'
 
           # Fetch the 7-line header block into a tempfile to avoid awk escape warnings
