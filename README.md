@@ -86,10 +86,9 @@ Documenting the journey from tech professional to farmer,
 sharing knowledge about sustainable food production and rural entrepreneurship.
 ```
 
-[![YouTube](https://img.shields.io/badge/YouTube-@lanisce-red?style=for-the-badge&logo=youtube&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8)](https://www.youtube.com/@lanisce)
-[![Instagram](https://img.shields.io/badge/Instagram-@lanisce.si-E4405F?style=for-the-badge&logo=instagram&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8)](https://www.instagram.com/lanisce.si/)
-[![X (Twitter)](https://img.shields.io/badge/X-@lanisce__si-000000?style=for-the-badge&logo=x&logoColor=d9e0ee&colorA=302d41&colorB=b7bdf8)](https://x.com/lanisce_si)
-
+- [ ] https://www.youtube.com/@lanisce
+- [ ] https://www.instagram.com/lanisce.si/
+- [ ] https://x.com/lanisce_si
 
 &nbsp;
 
