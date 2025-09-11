@@ -1,0 +1,102 @@
+name: Update README Weather
+
+on:
+  schedule:
+    # GitHub cron uses UTC. 10:00 UTC ≈ 12:00 in Ljubljana (CEST, summer time).
+    # Adjust if you prefer a different time.
+    - cron: '0 10 * * *'
+  workflow_dispatch:
+
+# Permissions to push changes and deploy Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Share the same concurrency group as the existing Pages deployment to avoid clashes
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0
+
+      - name: Update README.md weather section
+        id: update
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          readonly FILE="README.md"
+          readonly URL='https://wttr.in/~Bled,%20Slovenija'
+
+          # Fetch the 7-line header block
+          weather="$(curl -fsSL "${URL}" | head -n7)"
+
+          if [[ -z "${weather}" ]]; then
+            echo "Weather fetch returned empty content" >&2
+            exit 1
+          fi
+
+          # Find the start of the weather block by its header line
+          if ! start_line="$(grep -n -m1 '^Weather report:' "${FILE}" | cut -d: -f1)"; then
+            echo "Could not find 'Weather report:' in ${FILE}" >&2
+            exit 1
+          fi
+
+          end_line=$(( start_line + 6 ))
+
+          # Replace lines [start_line..end_line] with the freshly fetched weather block
+          awk -v s="${start_line}" -v e="${end_line}" -v repl="${weather}" '
+            NR==s { print repl; skip=1; next }
+            skip && NR> s && NR<= e { next }
+            { print }
+          ' "${FILE}" > "${FILE}.tmp"
+
+          if cmp -s "${FILE}" "${FILE}.tmp"; then
+            echo "README.md already up-to-date."
+            rm -f "${FILE}.tmp"
+            echo "no_changes=true" >> "${GITHUB_OUTPUT}"
+          else
+            mv "${FILE}.tmp" "${FILE}"
+            echo "Updated README.md weather block."
+            echo "no_changes=false" >> "${GITHUB_OUTPUT}"
+          fi
+
+      - name: Commit and push changes (if any)
+        if: steps.update.outputs.no_changes == 'false'
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "No changes staged; skipping commit."
+            exit 0
+          fi
+          git commit -m "chore(readme): daily weather update (Bled, SI)"
+          git push
+
+      # Deploy to GitHub Pages directly from this workflow to guarantee deployment
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload web directory (static site)
+          path: './web'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
