@@ -13,11 +13,11 @@ bash(13849)─┬─wife(13936)
 ➜  fentas git:(main) curl wttr.in                                            
 Weather report: Bled, Slovenija
 
-  [38;5;226m     /[0m       Partly cloudy
-  [38;5;226m _ /""[38;5;250m.-.    [0m [38;5;154m18[0m °C[0m          
-  [38;5;226m   _[38;5;250m(   ).  [0m [1m↑[0m [38;5;118m5[0m km/h[0m       
-  [38;5;226m   /[38;5;250m(___(__) [0m 10 km[0m          
-                0.2 mm[0m         
+       /       Partly cloudy
+   _ /"".-.     18 °C          
+     _(   ).   ↑ 5 km/h       
+     /(___(__)  10 km          
+                0.2 mm         
 ```
 
 &nbsp;
