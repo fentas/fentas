@@ -36,27 +36,37 @@ jobs:
 
           readonly FILE="README.md"
           readonly URL='https://wttr.in/~Bled,%20Slovenija?T'
+          readonly MARKER='^Weather report:'
 
-          # Fetch the 7-line header block
-          weather="$(curl -fsSL "${URL}" | head -n7)"
+          # Fetch the 7-line header block into a tempfile to avoid awk escape warnings
+          weather="$(mktemp)"
+          trap 'rm -f "${weather}"' EXIT
+          if ! curl -fsSL "${URL}" | head -n7 > "${weather}"; then
+            echo "Failed to fetch weather" >&2
+            exit 1
+          fi
 
-          if [[ -z "${weather}" ]]; then
-            echo "Weather fetch returned empty content" >&2
+          if ! grep -q "${MARKER}" "${weather}"; then
+            echo "Weather fetch returned unexpected content" >&2
             exit 1
           fi
 
           # Find the start of the weather block by its header line
-          if ! start_line="$(grep -n -m1 '^Weather report:' "${FILE}" | cut -d: -f1)"; then
-            echo "Could not find 'Weather report:' in ${FILE}" >&2
+          if ! start_line="$(grep -n -m1 "${MARKER}" "${FILE}" | cut -d: -f1)"; then
+            echo "Could not find '${MARKER}' in ${FILE}" >&2
             exit 1
           fi
 
           end_line=$(( start_line + 6 ))
 
           # Replace lines [start_line..end_line] with the freshly fetched weather block
-          awk -v s="${start_line}" -v e="${end_line}" -v repl="${weather}" '
-            NR==s { print repl; skip=1; next }
-            skip && NR> s && NR<= e { next }
+          awk -v s="${start_line}" -v e="${end_line}" -v f="${weather}" '
+            NR == s {
+              while ((getline line < f) > 0) print line;
+              close(f);
+              skip=1; next
+            }
+            skip && NR > s && NR <= e { next }
             { print }
           ' "${FILE}" > "${FILE}.tmp"
 
