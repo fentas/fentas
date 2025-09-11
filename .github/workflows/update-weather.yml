@@ -2,9 +2,9 @@ name: Update README Weather
 
 on:
   schedule:
-    # GitHub cron uses UTC. 10:00 UTC ≈ 12:00 in Ljubljana (CEST, summer time).
+    # GitHub cron uses UTC. 12:00 UTC ≈ 14:00 in Ljubljana (CEST, summer time).
     # Adjust if you prefer a different time.
-    - cron: '0 10 * * *'
+    - cron: '0 12 * * *'
   workflow_dispatch:
 
 # Permissions to push changes and deploy Pages
