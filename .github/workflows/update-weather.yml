@@ -3,18 +3,11 @@ name: Update README Weather
 on:
   schedule:
     # GitHub cron uses UTC. 12:00 UTC ≈ 14:00 in Ljubljana (CEST, summer time).
-    # Adjust if you prefer a different time.
     - cron: '0 12 * * *'
   workflow_dispatch:
 
-# Permissions to push changes and deploy Pages
 permissions:
   contents: write
-
-# Share the same concurrency group as the existing Pages deployment to avoid clashes
-concurrency:
-  group: pages
-  cancel-in-progress: false
 
 jobs:
   update-weather:
@@ -33,28 +26,21 @@ jobs:
           set -euo pipefail
 
           readonly FILE="README.md"
-          readonly URL='https://wttr.in/~Bled,%20Slovenija?T&m'
+          readonly URL='https://wttr.in/~Nemci,%20Slovenija?T&m'
           readonly MARKER='^Weather report:'
+          error() { echo "$@" >&2; exit 1; }
 
-          # Fetch the 7-line header block into a tempfile to avoid awk escape warnings
           weather="$(mktemp)"
           trap 'rm -f "${weather}"' EXIT
-          if ! curl -fsSL "${URL}" | head -n7 > "${weather}"; then
-            echo "Failed to fetch weather" >&2
-            exit 1
-          fi
 
-          if ! grep -q "${MARKER}" "${weather}"; then
-            echo "Weather fetch returned unexpected content" >&2
-            exit 1
-          fi
+          curl -fsSL "${URL}" | head -n7 > "${weather}" ||
+            error "Failed to fetch weather"
 
-          # Find the start of the weather block by its header line
-          if ! start_line="$(grep -n -m1 "${MARKER}" "${FILE}" | cut -d: -f1)"; then
-            echo "Could not find '${MARKER}' in ${FILE}" >&2
-            exit 1
-          fi
+          grep -q "${MARKER}" "${weather}" ||
+            error "Weather fetch returned unexpected content"
 
+          start_line="$(grep -n -m1 "${MARKER}" "${FILE}" | cut -d: -f1)" ||
+            error "Could not find '${MARKER}' in ${FILE}"
           end_line=$(( start_line + 6 ))
 
           # Replace lines [start_line..end_line] with the freshly fetched weather block
