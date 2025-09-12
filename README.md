@@ -11,13 +11,13 @@ bash(13849)─┬─wife(13936)
 **Software Architect** • **DevOps Engineer** • **Full-Stack Developer** • **Upcoming Farmer 🧑‍🌾**
 
 ➜  fentas git:(main) curl wttr.in                                            
-Weather report: Bled, Slovenija
+Weather report: Nemci, Slovenija
 
-     \  /       Partly cloudy
-   _ /"".-.     18 °C          
-     \_(   ).   ↑ 5 km/h       
-     /(___(__)  10 km          
-                0.2 mm         
+   _`/"".-.     Patchy rain nearby
+    ,\_(   ).   +23(25) °C     
+     /(___(__)  ↖ 4 km/h       
+       ‘ ‘ ‘ ‘  10 km          
+      ‘ ‘ ‘ ‘   0.1 mm         
 ```
 
 &nbsp;
