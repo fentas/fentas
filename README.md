@@ -15,7 +15,7 @@ Weather report: Nemci, Slovenija
 
       \   /     Sunny
        .-.      20 °C          
-    ― (   ) ―   ↗ 6 km/h       
+    ― (   ) ―   ↑ 4 km/h       
        `-’      10 km          
       /   \     0.0 mm         
 ```
