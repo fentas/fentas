@@ -49,7 +49,7 @@ drwxr-xr-x  cloud/           # AWS EKS, Azure AKS, Self-hosted, ...
 
 &nbsp;
 
-`$ echo $(</dev/fd/0)`
+`$ cat $(</dev/fd/0) <cvitae.yaml`
 
 ```yaml
 timeline:
