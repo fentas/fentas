@@ -41,7 +41,7 @@ drwxr-xr-x  cloud/           # AWS EKS, Azure AKS, Self-hosted, ...
 ```rust
   500  All things orchestration; custom, terraform, docker swarm to k8s
   501  Architectured complete infrastructure stack, from on-premise to cloud
-  502  Implemented CI/CD pipelines for Jenkins, GitLab, GitHub
+  502  Implemented CI/CD pipelines for Jenkins, Bitbucket, GitLab, GitHub
   503  Designed container build systems, custom compose to K8s workloads
   504  Built full-stack applications with modern tech stacks
   505  Migrated workloads to Kubernetes (on-premise & cloud)
