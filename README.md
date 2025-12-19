@@ -14,9 +14,9 @@ bash(13849)─┬─wife(13936)
 Weather report: Nemci, Slovenija
 
                 Mist
-   _ - _ - _ -  10 °C          
+   _ - _ - _ -  9 °C           
     _ - _ - _   ↗ 4 km/h       
-   _ - _ - _ -  2 km           
+   _ - _ - _ -  3 km           
                 0.0 mm         
 ```
 
