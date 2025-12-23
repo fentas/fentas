@@ -14,10 +14,10 @@ bash(13849)─┬─wife(13936)
 Weather report: Nemci, Slovenija
 
      \  /       Partly cloudy
-   _ /"".-.     9 °C           
-     \_(   ).   ↙ 4 km/h       
+   _ /"".-.     12 °C          
+     \_(   ).   ↙ 6 km/h       
      /(___(__)  10 km          
-                0.0 mm         
+                0.2 mm         
 ```
 
 &nbsp;
