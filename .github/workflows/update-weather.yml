@@ -33,7 +33,7 @@ jobs:
           weather="$(mktemp)"
           trap 'rm -f "${weather}"' EXIT
 
-          curl -fsSL "${URL}" | head -n7 > "${weather}" ||
+          curl -fsSL "${URL}" --http1.1 | head -n7 > "${weather}" ||
             error "Failed to fetch weather"
 
           grep -q "${MARKER}" "${weather}" ||
