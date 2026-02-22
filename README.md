@@ -5,7 +5,8 @@ Jan Guth
 ➜  fentas git:(main) pstree -p $$
 bash(13849)─┬─wife(13936)
             ├─tail(13922)
-            └─tail(13929)
+            ├─tail(13929)
+            └─tail(14129)
 
 ➜  fentas git:(main) uname -a
 **Software Architect** • **DevOps Engineer** • **Full-Stack Developer** • **Upcoming Farmer 🧑‍🌾**
