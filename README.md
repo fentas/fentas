@@ -12,13 +12,13 @@ bash(13849)─┬─wife(13936)
 **Software Architect** • **DevOps Engineer** • **Full-Stack Developer** • **Upcoming Farmer 🧑‍🌾**
 
 ➜  fentas git:(main) curl wttr.in                                            
-Weather report: nemci, slovenija
+Weather report: Nemci, Slovenija
 
-   _`/"".-.     Patchy rain nearby
-    ,\_(   ).   +22(24) °C     
-     /(___(__)  ← 6 km/h       
-       ‘ ‘ ‘ ‘  10 km          
-      ‘ ‘ ‘ ‘   0.0 mm         
+  [38;5;226m   \  /[0m       Partly cloudy
+  [38;5;226m _ /""[38;5;250m.-.    [0m [38;5;190m21[0m °C[0m
+  [38;5;226m   \_[38;5;250m(   ).  [0m [1m←[0m [38;5;190m10[0m km/h[0m
+  [38;5;226m   /[38;5;250m(___(__) [0m 10 km[0m
+                0.0 mm[0m
 ```
 
 &nbsp;
