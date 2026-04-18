@@ -34,8 +34,9 @@ jobs:
           trap 'rm -f "${weather}"' EXIT
 
           curl -fsSL "${URL}" --http1.1 \
-            | head -n7 > "${weather}" \
-            | sed -r 's/\x1B\[[0-9;]*[A-Za-z]//g' ||
+            | head -n7 \
+            | sed -r 's/\x1B\[[0-9;]*[A-Za-z]//g' \
+            > "${weather}" ||
             error "Failed to fetch weather"
 
           grep -q "${MARKER}" "${weather}" ||
