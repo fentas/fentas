@@ -16,7 +16,7 @@ Weather report: Nemci, Slovenija
 
      \  /       Partly cloudy
    _ /"".-.     21 °C
-     \_(   ).   ↑ 4 km/h
+     \_(   ).   ↗ 6 km/h
      /(___(__)  10 km
                 0.0 mm
 ```
