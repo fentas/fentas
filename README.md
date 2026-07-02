@@ -15,8 +15,8 @@ bash(13849)─┬─wife(13936)
 Weather report: Nemci, Slovenija
 
       \   /     Sunny
-       .-.      +33(35) °C
-    ― (   ) ―   ↗ 10 km/h
+       .-.      +31(33) °C
+    ― (   ) ―   → 4 km/h
        `-’      10 km
       /   \     0.0 mm
 ```
