@@ -14,11 +14,11 @@ bash(13849)─┬─wife(13936)
 ➜  fentas git:(main) curl wttr.in                                            
 Weather report: Nemci, Slovenija
 
-       .-.      Light rain
-      (   ).    +10(7) °C
-     (___(__)   ↙ 16 km/h
-      ‘ ‘ ‘ ‘   9 km
-     ‘ ‘ ‘ ‘    2.0 mm
+      \   /     Sunny
+       .-.      +11(8) °C
+    ― (   ) ―   ↙ 13 km/h
+       `-’      10 km
+      /   \     0.0 mm
 ```
 
 &nbsp;
